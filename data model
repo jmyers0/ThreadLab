@@ -1,0 +1,20 @@
+// File: data/model/ClothingItem.kt
+
+package com.yourdomain.threadlab.data.model
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "clothing_items")
+data class ClothingItem(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+
+    val imageUri: String, // Stores the path to the photo
+    val type: String,      // e.g., "Shirt", "Pants", "Shoes"
+    val color: String,
+    val pattern: String,
+    val material: String,
+    val occasion: String,  // e.g., "Casual", "Formal"
+    val season: String     // e.g., "Summer", "Winter"
+)
