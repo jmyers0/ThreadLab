@@ -1,0 +1,40 @@
+// File: data/database/AppDatabase.kt
+
+package com.yourdomain.threadlab.data.database
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.yourdomain.threadlab.data.model.ClothingItem
+
+@Database(entities = [ClothingItem::class], version = 1, exportSchema = false)
+abstract class AppDatabase : RoomDatabase() {
+
+    // Tells the database about the DAO
+    abstract fun clothingItemDao(): ClothingItemDao
+
+    companion object {
+        // @Volatile means this variable is always up-to-date
+        // for all threads.
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getDatabase(context: Context): AppDatabase {
+            // Return the existing instance if it's there,
+            // otherwise, build a new database.
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "threadlab_database"
+                )
+                .fallbackToDestructiveMigration() // Deletes old db on version change
+                .build()
+                
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+}
