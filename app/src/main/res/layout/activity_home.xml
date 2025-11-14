@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to THREADLAB!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/wardrobeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Wardrobe"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/generatorButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Outfit Generator"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/mixMatchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mix &amp; Match"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/planningButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Outfit Planner"/>
+
+</LinearLayout>
