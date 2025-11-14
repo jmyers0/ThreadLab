@@ -60,13 +60,13 @@ Understand your own wardrobe better.
 
 ---
 
-## 📸 Screenshots
+## 📸 LOGIN made with KAP
 
-*(Add screenshots of your app here to showcase the UI)*
+![Kapture 2025-11-14 at 16 09 48](https://github.com/user-attachments/assets/ef669c5d-f406-4172-8d47-25c340136ef4)
 
-| Wardrobe | Outfit Generator | Mix & Match |
-| :---: | :---: | :---: |
-| [Image] | [Image] | [Image] |
+## 📸 SIGN UP made with KAP
+![Kapture 2025-11-14 at 16 15 55](https://github.com/user-attachments/assets/8f42e6c9-56a2-4cc1-b1ed-9554ecf81bdd)
+
 
 ---
 
