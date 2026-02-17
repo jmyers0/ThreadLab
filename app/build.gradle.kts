@@ -1,5 +1,4 @@
-plugins {
-    alias(libs.plugins.android.application)
+plugins {alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
 
@@ -34,11 +33,9 @@ android {
         jvmTarget = "11"
     }
 
-    // --- ADDED THIS BLOCK ---
     buildFeatures {
         viewBinding = true
     }
-    // ------------------------
 }
 
 dependencies {
@@ -48,6 +45,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // --- ADDED: Google Gemini AI SDK ---
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+    // ----------------------------------
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
